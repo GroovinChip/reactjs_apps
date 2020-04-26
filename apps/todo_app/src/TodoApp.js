@@ -1,6 +1,6 @@
 import React from 'react';
 import ItemEntry from './components/item_entry';
-import { Typography, CssBaseline } from '@material-ui/core';
+import { Typography, CssBaseline, Grid } from '@material-ui/core';
 import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 
 const appTheme = createMuiTheme({
@@ -10,6 +10,15 @@ const appTheme = createMuiTheme({
       main: '#3d5afe',
     },
   },
+  overrides: {
+    MuiCssBaseline: {
+      '@global': {
+        body: {
+          margin: '8px',
+        },
+      },
+    },
+  },
 });
 
 function TodoApp() {
@@ -17,8 +26,16 @@ function TodoApp() {
     <div>
       <ThemeProvider theme={appTheme}>
         <CssBaseline />
-        <Typography variant='h5'>Todo App</Typography>
-        <ItemEntry />
+        <Grid
+          container
+          spacing={0}
+          align='center'
+          justify='center'
+          direction='column'
+        >
+          <Typography variant='h5'>Todo App</Typography>
+          <ItemEntry />
+        </Grid>
       </ThemeProvider>
     </div>
   );
