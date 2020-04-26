@@ -5,5 +5,7 @@ This application is a very basic todo app where the user can enter an item into 
 This application was created with `npx nano-react-app`.
 
 ## Post-coding notes:
+
 - I decided to approach this project by creating a `/components` directory and creating really basic boilerplate components (literally just an empty component definition and an export) to start myself off. This proved to be a good approach because it allowed me to quickly architect the app.
 - After getting basic functionality working (adding items to the list) I was stuck with state problems. I decided to move back working to class components to solve this problem, and I had success.
+- After achieving full functionality I decided to try and make the app look nice. I used the `material-ui` to do this, a library which generally annoys me, but I love material design so I decided to go for it anyway. I definitely learned more about the library with this project than I have from others in the past.
