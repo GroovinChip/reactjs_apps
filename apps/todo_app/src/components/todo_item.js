@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Checkbox } from '@material-ui/core';
 
 // A todo item
 export default class TodoItem extends Component {
@@ -16,11 +17,11 @@ export default class TodoItem extends Component {
       >
         {todoList.map((item, index) => (
           <li key={index.toString()}>
-            <input
+            <Checkbox
               type="checkbox"
               checked={false}
               onChange={() => completeTodo(index)}
-            ></input>
+            ></Checkbox>
             {item}
           </li>
         ))}

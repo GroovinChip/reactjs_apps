@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import TodoList from "./todo_list";
+import { Button } from "@material-ui/core";
+import TodoField from "./todo_field";
 
 export default class ItemEntry extends Component {
   constructor(props) {
@@ -44,14 +46,13 @@ export default class ItemEntry extends Component {
     return (
       <div>
         <form onSubmit={this.addTodo}>
-          <input
-            id="todo-field"
-            type="text"
-            placeholder="Todo"
-            value={this.state.todo}
-            onChange={this.getInputValue}
-          />
-          <input type="submit" value="Add" />
+          <TodoField
+            todo={this.state.todo}
+            getInputValue={this.getInputValue}
+          ></TodoField>
+          <Button variant="contained" color="primary" type="submit">
+            Add
+          </Button>
         </form>
         <TodoList
           length={this.state.todoList.length}
