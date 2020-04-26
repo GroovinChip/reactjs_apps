@@ -1,23 +1,37 @@
-import React, { Component } from "react";
-import { TextField } from "@material-ui/core";
+import React from 'react';
+import { TextField } from '@material-ui/core';
+import PropTypes from 'prop-types';
+import { withStyles } from '@material-ui/core/styles';
 
-export default class TodoField extends Component {
-  constructor(props) {
-    super(props);
-  }
+const styles = {
+  root: {},
+  input: {
+    color: '#gray',
+  },
+};
 
-  render() {
-    console.log(this.props);
-    return (
-      <TextField
-        id="todo-field"
-        variant="outlined"
-        margin="dense"
-        type="text"
-        label="Todo"
-        value={this.props.todo}
-        onChange={this.props.getInputValue}
-      />
-    );
-  }
+function TodoField(props) {
+  const { classes } = props;
+
+  return (
+    <TextField
+      className={classes.root}
+      InputLabelProps={{
+        className: classes.input,
+      }}
+      id='todo-field'
+      variant='outlined'
+      margin='dense'
+      type='text'
+      label='Todo'
+      value={props.todo}
+      onChange={props.getInputValue}
+    />
+  );
 }
+
+TodoField.propTypes = {
+  classes: PropTypes.object.isRequired,
+};
+
+export default withStyles(styles)(TodoField);

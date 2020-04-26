@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Checkbox } from '@material-ui/core';
+import { Checkbox, Typography } from '@material-ui/core';
 
 // A todo item
 export default class TodoItem extends Component {
@@ -16,15 +16,16 @@ export default class TodoItem extends Component {
         }}
       >
         {todoList.map((item, index) => (
-          <li key={index.toString()}>
-            <Checkbox
-              type='checkbox'
-              style={{ color: 'white' }}
-              checked={false}
-              onChange={() => completeTodo(index)}
-            ></Checkbox>
-            {item}
-          </li>
+          <Typography key={index.toString()}>
+            <li>
+              <Checkbox
+                type='checkbox'
+                checked={false}
+                onChange={() => completeTodo(index)}
+              ></Checkbox>
+              {item}
+            </li>
+          </Typography>
         ))}
       </ul>
     );

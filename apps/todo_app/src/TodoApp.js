@@ -1,12 +1,25 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ItemEntry from './components/item_entry';
-import { Typography } from '@material-ui/core';
+import { Typography, CssBaseline } from '@material-ui/core';
+import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+
+const appTheme = createMuiTheme({
+  palette: {
+    type: 'dark',
+    primary: {
+      main: '#3d5afe',
+    },
+  },
+});
 
 function TodoApp() {
   return (
     <div>
-      <Typography variant='h5'>Todo App</Typography>
-      <ItemEntry />
+      <ThemeProvider theme={appTheme}>
+        <CssBaseline />
+        <Typography variant='h5'>Todo App</Typography>
+        <ItemEntry />
+      </ThemeProvider>
     </div>
   );
 }
