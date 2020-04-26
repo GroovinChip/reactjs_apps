@@ -13,6 +13,7 @@ export default class TodoItem extends Component {
       <ul
         style={{
           listStyleType: 'none',
+          padding: '0px',
         }}
       >
         {todoList.map((item, index) => (
@@ -21,6 +22,7 @@ export default class TodoItem extends Component {
               <Checkbox
                 type='checkbox'
                 checked={false}
+                color={'primary'}
                 onChange={() => completeTodo(index)}
               ></Checkbox>
               {item}
