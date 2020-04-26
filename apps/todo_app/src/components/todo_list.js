@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import TodoItem from "./todo_item";
+import React, { Component } from 'react';
+import TodoItem from './todo_item';
 
 // Display the items in the todo list
 export default class TodoList extends Component {
@@ -14,7 +14,7 @@ export default class TodoList extends Component {
         {length > 0 ? (
           <TodoItem todoList={todoList} completeTodo={completeTodo}></TodoItem>
         ) : (
-          ""
+          ''
         )}
       </div>
     );

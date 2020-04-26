@@ -1,14 +1,14 @@
-import React, { Component } from "react";
-import TodoList from "./todo_list";
-import { Button } from "@material-ui/core";
-import TodoField from "./todo_field";
+import React, { Component } from 'react';
+import TodoList from './todo_list';
+import { Button, Typography } from '@material-ui/core';
+import TodoField from './todo_field';
 
 export default class ItemEntry extends Component {
   constructor(props) {
     super(props);
     this.state = {
       // user input
-      todo: "",
+      todo: '',
       todoList: [],
     };
     this.getInputValue = this.getInputValue.bind(this);
@@ -26,7 +26,7 @@ export default class ItemEntry extends Component {
     event.preventDefault();
     if (this.state.todo.length > 0) {
       this.setState({ todoList: this.state.todoList.concat(this.state.todo) });
-      this.setState({ todo: "" });
+      this.setState({ todo: '' });
     }
   }
 
@@ -50,7 +50,12 @@ export default class ItemEntry extends Component {
             todo={this.state.todo}
             getInputValue={this.getInputValue}
           ></TodoField>
-          <Button variant="contained" color="primary" type="submit">
+          <Button
+            variant='contained'
+            color='primary'
+            type='submit'
+            style={{ marginTop: '8px', marginLeft: '8px', height: '40px' }}
+          >
             Add
           </Button>
         </form>

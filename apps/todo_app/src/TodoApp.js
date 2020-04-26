@@ -1,10 +1,11 @@
-import React, { useState } from "react";
-import ItemEntry from "./components/item_entry";
+import React, { useState } from 'react';
+import ItemEntry from './components/item_entry';
+import { Typography } from '@material-ui/core';
 
 function TodoApp() {
   return (
     <div>
-      <h3>Todo App</h3>
+      <Typography variant='h5'>Todo App</Typography>
       <ItemEntry />
     </div>
   );
