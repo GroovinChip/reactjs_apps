@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import SimpleCounterApp from './CounterApp';
 import * as serviceWorker from './serviceWorker';
+import './assets/main.css';
 
 // Application entry point
 ReactDOM.render(

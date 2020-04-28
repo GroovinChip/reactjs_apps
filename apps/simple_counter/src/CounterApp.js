@@ -1,5 +1,4 @@
-import React, {useState} from 'react';
-import './CounterApp.css';
+import React, { useState } from 'react';
 
 // A simple counter app using Hooks.
 function CounterApp() {
@@ -9,11 +8,21 @@ function CounterApp() {
 
   return (
     <div>
-      <p>You clicked the button {count} times</p>
+      <p class='m-2'>You clicked the button {count} times</p>
       {/* This button will decrease the count by one */}
-      <button onClick={() => setCount(count - 1)}>Decrement</button>
+      <button
+        class='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-1'
+        onClick={() => setCount(count - 1)}
+      >
+        Decrement
+      </button>
       {/* This button will increase the count by one */}
-      <button onClick={() => setCount(count + 1)}>increment</button>
+      <button
+        class='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'
+        onClick={() => setCount(count + 1)}
+      >
+        Increment
+      </button>
     </div>
   );
 }
