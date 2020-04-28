@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 // This component represent a list of items, rendered as an ordered list.
 function ItemList(props) {

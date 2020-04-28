@@ -1,0 +1,8 @@
+body {
+  background-color: #262725;
+  color: #ecf2f2;
+}
+
+.form-control::placeholder {
+  color: #ecf2f2;
+}
